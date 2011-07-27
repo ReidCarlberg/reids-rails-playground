@@ -1,0 +1,28 @@
+<%= javascript_include_tag 'contentflow.js' %>
+<script>
+ContentFlowGlobal.setAddOnConf('slideshow', {startOnLoad: true, duration: 4000});
+</script>
+        </script>
+
+<div class="ContentFlow">
+            <div class="loadIndicator"><div class="indicator"></div></div>
+            <div class="flow">
+<% Option.all.each do |current| %>
+		        <div class="item">
+		            <div class="content" >
+						
+		            	<h3><%= current.title %></h3>
+						<img class="content" src="images/spacer2.png" >
+						<p><%= current.description[0..500] %></p>
+						<h3 align="center"><%= current.author %></h3>
+							<p align="center"><a href="<%= current.guid.gsub("<guid>","").gsub("</guid>","") %>" target="_blank">Code Share</a> -
+							<a href="<%= current.installUrl %>" target="_blank">Install</a> - 
+							<a href="<%= current.sourceUrl %>" target="_blank">Source</a></p>
+							<p align="center"><%= current.pubdate %></p>
+		            </div>
+		        </div>
+<% end %>
+            </div>
+            <div class="globalCaption"></div>
+            <div class="scrollbar"><div class="slider"><div class="position"></div></div></div>
+        </div>

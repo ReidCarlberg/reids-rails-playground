@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  link: MyString
+  description: MyString
+  pubdate: MyString
+  guid: MyString
+  author: MyString
+  installUrl: MyString
+  sourceUrl: MyString
+
+two:
+  title: MyString
+  link: MyString
+  description: MyString
+  pubdate: MyString
+  guid: MyString
+  author: MyString
+  installUrl: MyString
+  sourceUrl: MyString

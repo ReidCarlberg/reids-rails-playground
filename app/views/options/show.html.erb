@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @option.title %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @option.link %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @option.description %>
+</p>
+
+<p>
+  <b>Pubdate:</b>
+  <%= @option.pubdate %>
+</p>
+
+<p>
+  <b>Guid:</b>
+  <%= @option.guid %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @option.author %>
+</p>
+
+<p>
+  <b>Installurl:</b>
+  <%= @option.installUrl %>
+</p>
+
+<p>
+  <b>Sourceurl:</b>
+  <%= @option.sourceUrl %>
+</p>
+
+
+<%= link_to 'Edit', edit_option_path(@option) %> |
+<%= link_to 'Back', options_path %>
