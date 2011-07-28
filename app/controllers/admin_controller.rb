@@ -7,7 +7,6 @@ class AdminController < ApplicationController
 
 
   def handleInit
-    if Option.empty
     source = "http://feeds.feedburner.com/CodeShareLatestProjects" # url or local file
     content = "" # raw content of rss feed will be loaded here
     open(source) do |s| content = s.read end
@@ -33,6 +32,6 @@ class AdminController < ApplicationController
       print "Saved! ", newListing.title, "\n"
    end
   end
-end
+
   
 end
