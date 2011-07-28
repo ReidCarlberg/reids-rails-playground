@@ -22,7 +22,7 @@ class AdminController < ApplicationController
       newListing = Option.new
       newListing.title = current.title
       newListing.link = current.link
-      newListing.description = current.description
+      newListing.description = current.description[0..250]
       newListing.pubdate = current.date.to_s()
       newListing.guid = current.guid.to_s()
       newListing.author = memberName
