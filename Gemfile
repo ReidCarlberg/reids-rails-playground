@@ -12,10 +12,8 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-require 'rss/1.0'
-require 'rss/2.0'
-require 'open-uri'
 gem 'nokogiri'
+gem 'oauth2'
 
 # Use unicorn as the web server
 # gem 'unicorn'

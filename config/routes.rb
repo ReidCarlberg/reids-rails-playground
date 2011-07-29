@@ -1,9 +1,17 @@
 ForceOsViz1::Application.routes.draw do
+  get "test1/index"
+  get "test1/success"
+
   resources :options
 
   get "admin/index"
 
   get "home/index"
+  
+  #map.oauth_authorize '/oauth/start', :controller => 'oauth', :action => 'start'
+  #map.oauth_callback '/oauth/callback', :controller => 'oauth', :action => 'callback'  
+get '/oauth/start', :controller => 'oauth', :action => 'start'
+  get '/oauth/callback', :controller => 'oauth', :action => 'callback'  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
