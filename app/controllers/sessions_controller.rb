@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     ENV['sfdc_token'] = request.env['omniauth.auth']['credentials']['token']
     ENV['sfdc_instance_url'] = request.env['omniauth.auth']['instance_url']
     session[:user_info] = request.env['omniauth.auth']['user_info']
-    session[:user_hash] = request.env['omniauth.auth']['user_hash']
+    session[:user_hash] = request.env['omniauth.auth']['extra']['user_hash']
     render :text => request.env['omniauth.auth'].inspect
 #    redirect_to root_url
   end
