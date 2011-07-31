@@ -6,8 +6,8 @@ class ApplicationController < ActionController::Base
 
   private
     def current_user
-      if session['omniauth.auth']
-        @current_user = session['omniauth.auth']['user_info']
+      if session['user_info']
+        @current_user = session['user_info']
       end
     end
 
