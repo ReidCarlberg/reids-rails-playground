@@ -1,4 +1,6 @@
 ForceOsViz1::Application.routes.draw do
+  get "sessions/create"
+
   get "test1/index"
   get "test1/success"
 
@@ -8,10 +10,16 @@ ForceOsViz1::Application.routes.draw do
 
   get "home/index"
   
-  #map.oauth_authorize '/oauth/start', :controller => 'oauth', :action => 'start'
-  #map.oauth_callback '/oauth/callback', :controller => 'oauth', :action => 'callback'  
-get '/oauth/start', :controller => 'oauth', :action => 'start'
+  get '/oauth/start', :controller => 'oauth', :action => 'start'
   get '/oauth/callback', :controller => 'oauth', :action => 'callback'  
+
+  match '/auth/:provider/callback' => 'sessions#create'
+  
+  match '/signin' => 'sessions#new', :as => :signin
+
+  match '/signout' => 'sessions#destroy', :as => :signout
+
+  match '/auth/failure' => 'sessions#failure'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -62,7 +70,7 @@ get '/oauth/start', :controller => 'oauth', :action => 'start'
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "options#index"
+  root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 

@@ -13,7 +13,7 @@ group :development, :test do
 end
 
 gem 'nokogiri'
-gem 'oauth2'
+gem 'omniauth'
 
 # Use unicorn as the web server
 # gem 'unicorn'
