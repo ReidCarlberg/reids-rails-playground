@@ -1,6 +1,16 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
 <p><%= link_to "All Listings", options_path %></p>
+<% if session[:user_info] %>
+<p>User Info</p>
+<p><%= session[:user_info] %></p>
+<% end %>
+
+<% if session[:user_hash] %>
+<p>User Hash</p>
+<p><%= session[:user_hash] %></p>
+<% end %>
+
 <ul>
   <li>Ruby: <%=RUBY_VERSION%></li>
   <li>Gems: <%=`gem list`%></li>
