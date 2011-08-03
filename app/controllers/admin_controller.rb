@@ -1,9 +1,15 @@
-
 class AdminController < ApplicationController 
   
+  before_filter :validate_user, :only=> [:finddata]
+  
   def index
+    
+  end
+
+  def finddata
     handleInit()
   end
+  
 
 
   def handleInit
@@ -33,5 +39,12 @@ class AdminController < ApplicationController
    end
   end
 
+  private
+
+    def validate_user
+      if !session[:user_info] || session[:user_hash][:user_id] != "005300000048uZ1AAI"
+        redirect_to "/", notice => "Please login as an admin user to continue."
+      end
+    end
   
 end

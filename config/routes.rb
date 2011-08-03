@@ -7,10 +7,12 @@ ForceOsViz1::Application.routes.draw do
   resources :options
 
   get "admin/index"
+  get "admin/finddata"
 
   get "home/index"
   
   get '/oauth/start', :controller => 'oauth', :action => 'start'
+  
   get '/oauth/callback', :controller => 'oauth', :action => 'callback'  
 
   match '/auth/:provider/callback' => 'sessions#create'
