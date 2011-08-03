@@ -21,7 +21,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
       ENV['SALESFORCE_OAUTH2_KEY'], 
       ENV['SALESFORCE_OAUTH2_SECRET'],
       { :client_options => client_options }
-      { :redirect_uri => redirect_uri}
+      { :redirect_uri => ENV['SALESFORCE_OAUTH2_URI']}
     
     
 end
