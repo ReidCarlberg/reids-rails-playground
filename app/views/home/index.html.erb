@@ -4,7 +4,8 @@
 
 <p><%= link_to "Admin", "/admin/index" %></p>
 
-<p>Let's see if we get the ENV <%= ENV['TEST1']%></p>
+<p>Let's see if we get the ENV <%= ENV['SALESFORCE_OAUTH2_KEY'] %></p>
+<p>Let's see if we get the ENV <%= ENV['SALESFORCE_OAUTH2_SECRET'] %></p>
 <% if session[:user_info] %>
 <p>User Info</p>
 <p><%= session[:user_info] %></p>
