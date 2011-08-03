@@ -8,7 +8,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
       redirect_uri = 'https://cold-moon-137.herokuapp.com/auth/salesforce/callback'
     end
     
-    print redirect_uri 
+    logger.debug "env? ", Rails.env
+    logger.debug "uri? ", redirect_uri
     
     #production
     #provider :salesforce, 
