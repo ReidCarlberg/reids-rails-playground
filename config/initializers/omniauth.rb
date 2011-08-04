@@ -32,7 +32,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
       provider :salesforce, 
         ENV['SALESFORCE_OAUTH2_KEY'], 
         ENV['SALESFORCE_OAUTH2_SECRET'],
-        { :client_options => { :ssl => { :ca_file => "/usr/share/curl/curl-ca-bundle.crt" } } },
+        { :client_options => { :ssl => { :ca_file => "/usr/share/curl/curl-ca-bundle.crt" } } }
         { :redirect_uri => ENV['SALESFORCE_OAUTH2_URI']}      
     end
     
