@@ -9,7 +9,12 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     end
 
     puts "************HELLO LOGS!"
-    
+    puts "************Settings"
+    puts "Production? ", Rails.env.production?
+    puts "Client ", ENV['SALESFORCE_OAUTH2_KEY']
+    puts "secret ", ENV['SALESFORCE_OAUTH2_SECRET']
+    puts "URI ", ENV['SALESFORCE_OAUTH2_URI']
+    puts "options ", client_options
     #production
     #provider :salesforce, 
     #  ENV['SALESFORCE_OAUTH2_KEY'], 
