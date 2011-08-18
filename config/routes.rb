@@ -1,4 +1,6 @@
 ForceOsViz1::Application.routes.draw do
+  get "history/index"
+
   get "sessions/create"
 
   get "test1/index"

@@ -14,6 +14,7 @@ end
 
 gem 'nokogiri'
 gem 'omniauth'
+gem 'httparty'
 
 # Use unicorn as the web server
 # gem 'unicorn'

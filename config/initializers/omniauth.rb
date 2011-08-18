@@ -5,12 +5,12 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     #note: client options are based on my MBP which seems to have the common problem of Rails server not seeing a CRT file
     #this is not an issues in production
   
-    puts "************HELLO LOGS!"
+    puts "************HELLO LOGS! Reid's Rails Playground."
     puts "Production? ", Rails.env.production?
     puts "Client ", ENV['SALESFORCE_OAUTH2_KEY']
     puts "secret ", ENV['SALESFORCE_OAUTH2_SECRET']
     puts "URI ", ENV['SALESFORCE_OAUTH2_URI']
-    puts "options ", client_options
+    
     
     if Rails.env.production?
       puts "**************production"

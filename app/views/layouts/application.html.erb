@@ -12,6 +12,7 @@
 	  <li>
 	  Logged in as <%= session['user_info']['name'] %>
 	  </li>
+	<li><%= link_to('History', "/history/index") %></li>
 	  <li><%= link_to('Admin', "/admin/index") %></li>	
 	  <li><%= link_to('Logout', signout_path) %></li>
 	<% else %>
